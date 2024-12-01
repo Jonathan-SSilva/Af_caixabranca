@@ -1,4 +1,4 @@
-**Erros que podem conter no código: **
+**Erros que podem conter no código:**
 
 - [ ] Erro na inicialização do driver JDBC,
 - [ ] URL de conexão inválida,
@@ -41,7 +41,7 @@ O método conectarDB() não está tratando adequadamente a conexão:
 
 **Testes:**
 
-Teste de estrutura de controle
+**Teste de estrutura de controle**
 
 Cenário 1: O banco de dados está acessível, e o login e senha correspondem a um usuário válido.
 Cenário 2: O banco de dados está acessível, mas o login ou senha estão incorretos.
@@ -50,7 +50,7 @@ Cenário 4: A conexão foi feita, mas a tabela ou campos esperados não existem 
 
 - Certo, todos os trechos de código são executados.
 
-Teste de condição:
+**Teste de condição:**
 
 C1: O banco de dados está acessível (conn != null).
 C2: O banco de dados não está acessível (conn == null).
@@ -63,7 +63,7 @@ Certo.
     - rs.next() = true
     - rs.next() = false
 
-Teste de fluxo de dados:
+**Teste de fluxo de dados:**
 
 - Connection conn = null;
 - String url = "fdbc:mysql://127.0.0.1/test?=user=lopes&password=123";
@@ -76,16 +76,16 @@ Teste de fluxo de dados:
 
 Certo, todas as variáveis são declaradas antes do uso, e todas são utilizadas.
 
-Teste de ciclo:
+**Teste de ciclo:**
 
 Certo, No código não há estruturas explícitas de repetição.
 
 
-Grafo de Fluxo:
+**Grafo de Fluxo:**
 ![Grafo_De_Fluxo](https://github.com/user-attachments/assets/cee58f9d-b001-45d4-98d1-71cce6a70926)
 
 
-Complexidade ciclomática (M)
+**Complexidade ciclomática (M)**
 
 M = E - N + 2P
 
@@ -99,7 +99,7 @@ M = 13 - 9 + (2*2)
 
 M = 4 + 4 = 8
 
-Caminhos possíveis
+**Caminhos possíveis**
 
 4-1-3-5-6-9
 
@@ -112,3 +112,16 @@ Caminhos possíveis
 4-1-3-5-8-9
 
 4-1-3-5-6-7-9
+
+
+**Mapeamento:**
+
+- Nó 1: Início do método verificarUsuario.
+- Nó 2: Chama o método conectarDB() para conectar ao banco de dados.
+- Nó 3: Verifica se a conexão foi bem-sucedida.
+- Nó 4: Constroi a consulta SQL.
+- Nó 5: Executa a consulta SQL.
+- Nó 6: Verifica se há resultados na consulta (verifica rs.next()).
+- Nó 7: Atribui o valor de nome e define result = true caso a consulta tenha retornado dados.
+- Nó 8: Retorna false caso a consulta não tenha encontrado dados.
+- Nó 9: Fim do método, retorna result
