@@ -82,7 +82,7 @@ Certo, No código não há estruturas explícitas de repetição.
 
 
 Grafo de Fluxo:
-![Image](https://github.com/user-attachments/assets/70b3e69e-562a-4e5d-933f-615a386b41e2)
+![Image]
 
 
 Complexidade ciclomática (M)
